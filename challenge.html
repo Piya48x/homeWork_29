@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // รับ input จากผู้ใช้
+      let num1 = parseFloat(prompt("Enter the first number:"));
+      let num2 = parseFloat(prompt("Enter the second number:"));
+      let num3 = parseFloat(prompt("Enter the third number:"));
+
+      // ตรวจสอบว่าผู้ใช้ป้อนค่าที่ถูกต้องหรือไม่
+      if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        alert("Please enter valid numbers.");
+      } else {
+        // สร้าง array เพื่อเก็บตัวเลข
+        let numbers = [num1, num2, num3];
+
+        // เรียงลำดับตัวเลขจากมากไปน้อย
+        numbers.sort(function (a, b) {
+          return b - a;
+        });
+
+        // แสดงผลลัพธ์
+        alert("Sorted numbers: " + numbers.join(", "));
+      }
+    </script>
+  </body>
+</html>
